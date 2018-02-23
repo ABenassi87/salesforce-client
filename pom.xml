@@ -72,9 +72,6 @@
             <version>${json.version}</version>
         </dependency>
 
-
-
-
     </dependencies>
 
     <build>

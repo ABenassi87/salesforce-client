@@ -9,14 +9,21 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+
     <properties>
         <java.version>1.8</java.version>
-        <salesforce.version>42.0.0</salesforce.version>
-        <commons-io.version>2.6</commons-io.version>
         <commons-codec.version>1.11</commons-codec.version>
+        <commons-io.version>2.6</commons-io.version>
+        <commons-lang.version>3.7</commons-lang.version>
+        <guice.version>4.1.0</guice.version>
         <httpclient.version>4.5.5</httpclient.version>
         <httpcore.version>4.4.9</httpcore.version>
         <json.version>20180130</json.version>
+        <log4j.version>2.10.0</log4j.version>
+        <salesforce.version>42.0.0</salesforce.version>
+        <slf4j.version>1.8.0-beta1</slf4j.version>
+        <spring-boot.version>2.0.0.RC2</spring-boot.version>
+        <testng.version>6.14.2</testng.version>
     </properties>
 
     <dependencies>
@@ -72,7 +79,49 @@
             <version>${json.version}</version>
         </dependency>
 
+        <!-- Apache Commons -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+
+
+
+
+        <!-- Logs -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <!-- TestNG -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
+
 
     <build>
         <finalName>Salesforce Client API</finalName>
